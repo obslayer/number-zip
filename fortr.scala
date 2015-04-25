@@ -8,13 +8,13 @@ object fortr{
     val start_t = System.currentTimeMillis
     val zipnum = pair.map(_.foldRight(0)((a,b)=>a._1+b*a._2))
     val end_t = System.currentTimeMillis
-    println (end_t-start_t)
+    println (end_t - start_t)
 //    println (zipnum)
     def f(zip:Int, curone:Int):Int = {
-      val rez = zip%curone
+      val rez = zip % curone
   //    println (rez)
   //
-      (zip-rez)/curone
+      (zip - rez)/curone
     }
     val unziped = zipnum.map(order.foldLeft(_)(f))
   }
